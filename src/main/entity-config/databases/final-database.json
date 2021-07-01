@@ -1,0 +1,144 @@
+{
+  "lang" : "zxx",
+  "path-namespace" : [ {
+    "prefix" : "es",
+    "namespace-uri" : "http://marklogic.com/entity-services"
+  } ],
+  "range-path-index" : [ {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/KronosEvents/EmployeeIdPeriod",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/KronosEvents/EventSource",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/KronosEvents/EmployeeId",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/KronosEvents/EventDate",
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/KronosEvents/TimesheetType",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/EmployeePeriod/EmployeeIdPeriod",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/EmployeePeriod/EmployeeId",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/EmployeePeriod/EmployeeName",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/EmployeePeriod/PeriodStartDate",
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/EmployeePeriod/PeriodEndDate",
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/WellnessEvents/EmployeeIdPeriod",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/WellnessEvents/EventSource",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/WellnessEvents/EmployeeId",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/WellnessEvents/EditDate",
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/WellnessEvents/PeriodEndDate",
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/PayrollData/EmployeeIdPeriod",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/PayrollData/PayrollSource",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/PayrollData/EmployeeId",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/PayrollData/PeriodEndDate",
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/PayrollData/FiscalYear",
+    "range-value-positions" : false,
+    "scalar-type" : "decimal"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/EmployeeReference/EmployeeId",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/EmployeeReference/EmployeeName",
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/PeriodReference/PeriodStartDate",
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  }, {
+    "invalid-values" : "reject",
+    "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/PeriodReference/PeriodEndDate",
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  } ],
+  "database-name" : "%%mlFinalDbName%%"
+}

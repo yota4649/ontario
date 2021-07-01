@@ -1,0 +1,24 @@
+{
+  "name" : "normalizeWDPeriods",
+  "description" : "",
+  "customHook" : {
+    "module" : "/envision/customHooks/uriRemapper.sjs",
+    "parameters" : { },
+    "user" : "",
+    "runBefore" : false
+  },
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stepDefinitionName" : "normalizeWDPeriods",
+  "stepDefinitionType" : "custom",
+  "additionalCollections" : [ ],
+  "sourceQuery" : "cts.collectionQuery([\"PayrollExpenseJournalLine_WD_LTD.csv\"])",
+  "sourceDatabase" : "ontario-ca-STAGING",
+  "collections" : [ "WorkDay-Normalized-Periods", "normalizeWDPeriods", "PayrollData" ],
+  "permissions" : "data-hub-operator,read,data-hub-operator,update",
+  "sourceCollection" : "PayrollExpenseJournalLine_WD_LTD.csv",
+  "targetDatabase" : "ontario-ca-STAGING",
+  "targetFormat" : "json",
+  "targetEntityType" : "PayrollData",
+  "stepId" : "normalizeWDPeriods-custom"
+}

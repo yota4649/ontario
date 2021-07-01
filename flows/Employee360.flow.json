@@ -1,0 +1,32 @@
+{
+  "name" : "Employee360",
+  "description" : "",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : { },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "stepId" : "mapEmployeeReference-mapping"
+    },
+    "2" : {
+      "stepId" : "mapEmployeePeriodRef-mapping"
+    },
+    "3" : {
+      "stepId" : "mapKronosEvents-mapping"
+    },
+    "4" : {
+      "stepId" : "mapToWellnessEvents-mapping"
+    },
+    "5" : {
+      "stepId" : "mapPeopleSoftToPayroll-mapping"
+    },
+    "6" : {
+      "stepId" : "normalizeWDPeriods-custom"
+    },
+    "7" : {
+      "stepId" : "mapWorkDayToPayroll-mapping"
+    }
+  }
+}

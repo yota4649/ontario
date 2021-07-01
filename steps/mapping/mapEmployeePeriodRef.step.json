@@ -1,0 +1,51 @@
+{
+  "name" : "mapEmployeePeriodRef",
+  "description" : "",
+  "customHook" : {
+    "module" : "/envision/customHooks/uriRemapper.sjs",
+    "parameters" : { },
+    "user" : "",
+    "runBefore" : false
+  },
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stepDefinitionName" : "entity-services-mapping",
+  "stepDefinitionType" : "MAPPING",
+  "additionalCollections" : [ ],
+  "sourceQuery" : "cts.collectionQuery([\"Employee-Period-Ref\"])",
+  "sourceDatabase" : "ontario-ca-STAGING",
+  "collections" : [ "EmployeePeriod", "mapEmployeePeriodRef" ],
+  "permissions" : "data-hub-operator,read,data-hub-operator,update",
+  "targetDatabase" : "ontario-ca-FINAL",
+  "targetFormat" : "json",
+  "targetEntityType" : "http://marklogic.envision.com/EmployeePeriod-0.0.1/EmployeePeriod",
+  "properties" : {
+    "hasTimeEvents" : {
+      "sourcedFrom" : "hasTimeEvents"
+    },
+    "EmployeeIdPeriod" : {
+      "sourcedFrom" : "concat(EmployeeId,\"-\",PeriodEndDate)"
+    },
+    "EmployeeId" : {
+      "sourcedFrom" : "EmployeeId"
+    },
+    "EmployeeName" : {
+      "sourcedFrom" : "EmployeeName"
+    },
+    "PeriodEndDate" : {
+      "sourcedFrom" : "PeriodEndDate"
+    },
+    "hasTemperatureCheckIn" : {
+      "sourcedFrom" : "hasTemperatureCheckIn"
+    },
+    "hayPayrollData" : {
+      "sourcedFrom" : "hayPayrollData"
+    },
+    "PeriodStartDate" : {
+      "sourcedFrom" : "PeriodStartDate"
+    }
+  },
+  "namespaces" : { },
+  "selectedSource" : "query",
+  "stepId" : "mapEmployeePeriodRef-mapping"
+}

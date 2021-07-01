@@ -1,0 +1,72 @@
+{
+  "name" : "mapToWellnessEvents",
+  "description" : "",
+  "customHook" : {
+    "module" : "/envision/customHooks/uriRemapper.sjs",
+    "parameters" : { },
+    "user" : "",
+    "runBefore" : false
+  },
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stepDefinitionName" : "entity-services-mapping",
+  "stepDefinitionType" : "MAPPING",
+  "additionalCollections" : [ ],
+  "sourceQuery" : "cts.collectionQuery([\"WellnessSurvey.csv\"])",
+  "sourceDatabase" : "ontario-ca-STAGING",
+  "collections" : [ "WellnessEvents", "mapToWellnessEvents" ],
+  "permissions" : "data-hub-operator,read,data-hub-operator,update",
+  "targetDatabase" : "ontario-ca-FINAL",
+  "targetFormat" : "json",
+  "targetEntityType" : "http://marklogic.envision.com/WellnessEvents-0.0.1/WellnessEvents",
+  "properties" : {
+    "Temperature" : {
+      "sourcedFrom" : "temperatur"
+    },
+    "EditDate" : {
+      "sourcedFrom" : "getIsoDatefromDate(EditDate)"
+    },
+    "Field14O" : {
+      "sourcedFrom" : "field_14_o"
+    },
+    "NewSymptom" : {
+      "sourcedFrom" : "new_sympto"
+    },
+    "TodaysWork" : {
+      "sourcedFrom" : "todays_wor"
+    },
+    "CreateDate" : {
+      "sourcedFrom" : "getIsoDatefromDate(CreationDa)"
+    },
+    "PeriodEndDate" : {
+      "sourcedFrom" : "getPeriodforEventDate(please_ent,EditDate,\"PeriodEndDate\")"
+    },
+    "PeriodStartDate" : {
+      "sourcedFrom" : "getPeriodforEventDate(please_ent,EditDate,\"PeriodStartDate\")"
+    },
+    "EventSource" : {
+      "sourcedFrom" : "\"Wellness\""
+    },
+    "AreYouEx" : {
+      "sourcedFrom" : "are_you_ex"
+    },
+    "EmployeeIdPeriod" : {
+      "sourcedFrom" : "concat(please_ent,\"-\",getPeriodforEventDate(please_ent,EditDate,\"PeriodEndDate\"))"
+    },
+    "TimeofTemperature" : {
+      "sourcedFrom" : "time_of_te"
+    },
+    "EmployeeIdPeriodSourceKey" : {
+      "sourcedFrom" : "concat(please_ent,\"-\",getPeriodforEventDate(please_ent,EditDate,\"PeriodEndDate\"),\"-\",\"Wellness\")"
+    },
+    "EmployeeId" : {
+      "sourcedFrom" : "please_ent"
+    },
+    "Field14" : {
+      "sourcedFrom" : "field_14"
+    }
+  },
+  "namespaces" : { },
+  "selectedSource" : "query",
+  "stepId" : "mapToWellnessEvents-mapping"
+}

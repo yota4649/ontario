@@ -1,0 +1,102 @@
+{
+  "collections" : [ "KronosEvents", "mapKronosEvents" ],
+  "additionalCollections" : [ ],
+  "permissions" : "data-hub-operator,read,data-hub-operator,update",
+  "batchSize" : 100,
+  "validateEntity" : "doNotValidate",
+  "targetFormat" : "json",
+  "name" : "mapKronosEvents",
+  "description" : "",
+  "customHook" : {
+    "module" : "/envision/customHooks/uriRemapper.sjs",
+    "parameters" : { },
+    "user" : "",
+    "runBefore" : false
+  },
+  "threadCount" : 4,
+  "stepDefinitionName" : "entity-services-mapping",
+  "stepDefinitionType" : "mapping",
+  "sourceQuery" : "cts.collectionQuery([\"Kronos.csv\"])",
+  "sourceDatabase" : "ontario-ca-STAGING",
+  "targetDatabase" : "ontario-ca-FINAL",
+  "targetEntityType" : "http://marklogic.envision.com/KronosEvents-0.0.1/KronosEvents",
+  "properties" : {
+    "DurationInSeconds" : {
+      "sourcedFrom" : "number(DURATIONINSECONDS)"
+    },
+    "EventDate" : {
+      "sourcedFrom" : "getIsoDatefromDatetime(EVENTDATE)"
+    },
+    "CurrentPeriodStart" : {
+      "sourcedFrom" : "getIsoDatefromDatetime(CURRPAYPERIODSTART)"
+    },
+    "NextPeriodStart" : {
+      "sourcedFrom" : "getIsoDatefromDatetime(NEXTPAYPERIODSTART)"
+    },
+    "WorkRuleName" : {
+      "sourcedFrom" : "WORKRULENAME"
+    },
+    "TimesheetType" : {
+      "sourcedFrom" : "TIMESHEETITEMTYPE"
+    },
+    "CurrentPeriodEnd" : {
+      "sourcedFrom" : "getIsoDatefromDatetime(CURRPAYPERIODEND)"
+    },
+    "PeriodEndDate" : {
+      "sourcedFrom" : "getPeriodforEventDate(PERSONNUM,EVENTDATE,\"PeriodEndDate\")"
+    },
+    "PeriodStartDate" : {
+      "sourcedFrom" : "getPeriodforEventDate(PERSONNUM,EVENTDATE,\"PeriodStartDate\")"
+    },
+    "EventSource" : {
+      "sourcedFrom" : "\"Kronos\""
+    },
+    "TimeInSeconds" : {
+      "sourcedFrom" : "TIMEINSECONDS"
+    },
+    "NextPeriodEnd" : {
+      "sourcedFrom" : "getIsoDatefromDatetime(NEXTPAYPERIODEND)"
+    },
+    "EndReason" : {
+      "sourcedFrom" : "ENDREASON"
+    },
+    "EventEndDate" : {
+      "sourcedFrom" : "getIsoDatefromDatetime(ENDDTM)"
+    },
+    "PreviousPeriodEnd" : {
+      "sourcedFrom" : "getIsoDatefromDatetime(PREVPAYPERIODEND)"
+    },
+    "EventStartDate" : {
+      "sourcedFrom" : "getIsoDatefromDatetime(STARTDTM)"
+    },
+    "StartReason" : {
+      "sourcedFrom" : "STARTREASON"
+    },
+    "EmployeeIdPeriod" : {
+      "sourcedFrom" : "concat(PERSONNUM,\"-\",getPeriodforEventDate(PERSONNUM,EVENTDATE,\"PeriodEndDate\"))"
+    },
+    "EmployeeIdPeriodSourceKey" : {
+      "sourcedFrom" : "concat(PERSONNUM,\"-\",getPeriodforEventDate(PERSONNUM,EVENTDATE,\"PeriodEndDate\"),\"-\",\"Kronos\")"
+    },
+    "EmployeeId" : {
+      "sourcedFrom" : "PERSONNUM"
+    },
+    "EventStartDateTime" : {
+      "sourcedFrom" : "getIsoDateTimefromDatetime(STARTDTM)"
+    },
+    "PreviousPeriodStart" : {
+      "sourcedFrom" : "getIsoDatefromDatetime(PREVPAYPERIODSTART)"
+    },
+    "PayCodeName" : {
+      "sourcedFrom" : "PAYCODENAME"
+    },
+    "EventEndDateTime" : {
+      "sourcedFrom" : "getIsoDateTimefromDatetime(ENDDTM)"
+    }
+  },
+  "namespaces" : { },
+  "selectedSource" : "query",
+  "stepId" : "mapKronosEvents-mapping",
+  "provenanceGranularityLevel" : "coarse",
+  "lastUpdated" : "2021-06-16T11:21:48.385677-07:00"
+}

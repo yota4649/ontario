@@ -1,0 +1,39 @@
+{
+  "name" : "mapEmployeeReference",
+  "description" : "",
+  "customHook" : {
+    "module" : "/envision/customHooks/uriRemapper.sjs",
+    "parameters" : { },
+    "user" : "",
+    "runBefore" : false
+  },
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stepDefinitionName" : "entity-services-mapping",
+  "stepDefinitionType" : "MAPPING",
+  "additionalCollections" : [ ],
+  "sourceQuery" : "cts.collectionQuery([\"EmployeeTable.csv\"])",
+  "sourceDatabase" : "ontario-ca-STAGING",
+  "collections" : [ "EmployeeReference", "mapEmployeeReference" ],
+  "permissions" : "data-hub-operator,read,data-hub-operator,update",
+  "targetDatabase" : "ontario-ca-FINAL",
+  "targetFormat" : "json",
+  "targetEntityType" : "http://marklogic.envision.com/EmployeeReference-0.0.1/EmployeeReference",
+  "properties" : {
+    "EmployeeId" : {
+      "sourcedFrom" : "EmployeeId"
+    },
+    "EmployeeName" : {
+      "sourcedFrom" : "Employeename"
+    },
+    "hasPayPeriods" : {
+      "sourcedFrom" : ""
+    },
+    "hasEmployee" : {
+      "sourcedFrom" : "hasEmployee"
+    }
+  },
+  "namespaces" : { },
+  "selectedSource" : "query",
+  "stepId" : "mapEmployeeReference-mapping"
+}
