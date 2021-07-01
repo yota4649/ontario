@@ -4,6 +4,26 @@
     "prefix" : "es",
     "namespace-uri" : "http://marklogic.com/entity-services"
   } ],
+  "range-element-index" : [ {
+    "invalid-values" : "reject",
+    "localname" : "EmployeeId",
+    "namespace-uri" : null,
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "localname" : "PeriodEndDate",
+    "namespace-uri" : null,
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  }, {
+    "invalid-values" : "reject",
+    "localname" : "PeriodStartDate",
+    "namespace-uri" : null,
+    "range-value-positions" : false,
+    "scalar-type" : "date"
+  } ],
   "range-path-index" : [ {
     "invalid-values" : "reject",
     "path-expression" : "/(es:envelope|envelope)/(es:instance|instance)/KronosEvents/EmployeeIdPeriod",
