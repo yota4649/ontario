@@ -13,11 +13,11 @@
   "stepDefinitionType" : "custom",
   "additionalCollections" : [ ],
   "sourceQuery" : "cts.collectionQuery([\"PayrollExpenseJournalLine_WD_LTD.csv\"])",
-  "sourceDatabase" : "ontario-ca-STAGING",
+  "sourceDatabase" : "data-hub-STAGING",
   "collections" : [ "WorkDay-Normalized-Periods", "normalizeWDPeriods", "PayrollData" ],
   "permissions" : "data-hub-operator,read,data-hub-operator,update",
   "sourceCollection" : "PayrollExpenseJournalLine_WD_LTD.csv",
-  "targetDatabase" : "ontario-ca-STAGING",
+  "targetDatabase" : "data-hub-STAGING",
   "targetFormat" : "json",
   "targetEntityType" : "PayrollData",
   "stepId" : "normalizeWDPeriods-custom"

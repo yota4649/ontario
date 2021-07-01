@@ -13,10 +13,10 @@
   "stepDefinitionType" : "MAPPING",
   "additionalCollections" : [ ],
   "sourceQuery" : "cts.andQuery([cts.collectionQuery([\"Employee-Period-Ref\"]),cts.jsonPropertyRangeQuery(\"PeriodEndDate\",\">=\",\"2016-10-01\"),cts.jsonPropertyRangeQuery(\"PeriodEndDate\",\"<=\",\"2021-01-02\")  ])",
-  "sourceDatabase" : "ontario-ca-STAGING",
+  "sourceDatabase" : "data-hub-STAGING",
   "collections" : [ "PayrollData", "mapWorkDayToPayroll" ],
   "permissions" : "data-hub-operator,read,data-hub-operator,update",
-  "targetDatabase" : "ontario-ca-FINAL",
+  "targetDatabase" : "data-hub-FINAL",
   "targetFormat" : "json",
   "targetEntityType" : "http://marklogic.envision.com/PayrollData-0.0.1/PayrollData",
   "properties" : {

@@ -17,8 +17,8 @@
   "stepDefinitionName" : "entity-services-mapping",
   "stepDefinitionType" : "mapping",
   "sourceQuery" : "cts.collectionQuery([\"PeopleSoftHRData.csv\"])",
-  "sourceDatabase" : "ontario-ca-STAGING",
-  "targetDatabase" : "ontario-ca-FINAL",
+  "sourceDatabase" : "data-hub-STAGING",
+  "targetDatabase" : "data-hub-FINAL",
   "targetEntityType" : "http://marklogic.envision.com/PayrollData-0.0.1/PayrollData",
   "properties" : {
     "WorkersCompensationAccountCode" : {
